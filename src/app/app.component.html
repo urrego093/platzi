@@ -1,8 +1,12 @@
-<h1>{{ 'hola desde ' + title}}</h1>
-
+<h1>hola desde {{ title}}</h1>
 
 <input type="text" [(ngModel)]="title">
 <button (click)="addItem()">Add item</button>
+
+
+
+
+
 
 <!--<div *ngIf="title === 'camilo'">-->
 <!--  esto es el div de camilo-->
@@ -31,7 +35,5 @@
 
 
 <div *ngFor="let product of products ">
-  {{product.title}}
-  <img [src]="product.image" alt="">
-  {{product.price}}
+  <app-product (productClicked)="clickProduct($event)" [product]="product"></app-product>
 </div>

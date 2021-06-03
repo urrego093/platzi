@@ -6,8 +6,10 @@ import {Product} from './product.model'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
-  title = 'platzi2';
+  title = 'poaqui';
 
   nombres = ['camilo', 'javier', 'johan']
 
@@ -62,6 +64,11 @@ export class AppComponent {
 
   deleteItem( index: number ){
     this.nombres.splice(index, 1)
+  }
+
+  clickProduct(id: number){
+    console.log('product');
+    console.log(id);
   }
 
 }
