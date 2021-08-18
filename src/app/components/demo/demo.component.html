@@ -1,9 +1,16 @@
 <h1>hola desde {{ title}}</h1>
 
 <input type="text" [(ngModel)]="title">
+
+
 <button (click)="addItem()">Add item</button>
 
-
+<br>
+<!--<div>-->
+<!--  <input type="text" [(ngModel)]="power"/>-->
+<!--  <br>-->
+<!--  <span *ngIf="power">{{power | exponential }}</span>-->
+<!--</div>-->
 
 
 
@@ -21,7 +28,7 @@
 
 <div [ngSwitch]="title">
   <p *ngSwitchCase="'camilo'">Este es chimbita 😎</p>
-  <p *ngSwitchCase="'javier'" >Este es chimbita tambien 😸</p>
+  <p *ngSwitchCase="'javier'">Este es chimbita tambien 😸</p>
   <p *ngSwitchDefault>No es chimbita 😅</p>
 </div>
 
@@ -33,7 +40,3 @@
   </li>
 </ul>
 
-
-<div *ngFor="let product of products ">
-  <app-product (productClicked)="clickProduct($event)" [product]="product"></app-product>
-</div>
