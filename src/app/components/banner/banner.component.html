@@ -1,0 +1,14 @@
+<p>banner works!</p>
+
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let imga of images">
+      <img [src]="imga" alt="Not found">
+    </div>
+
+  </div>
+  <!-- Add Arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
